@@ -7,7 +7,6 @@ ssize_t find_short(const char *s);
 int main(void){
 	printf("%zi\n", find_short("bitcoin take over the world maybe who knows perhaps"));
 	printf("%zi\n", find_short("lets talk about C the best language"));
-
 }
 
 ssize_t find_short(const char *s){
@@ -17,11 +16,13 @@ ssize_t find_short(const char *s){
 		if(*s != '\0' && *s != ' ')
 			++curr;
 		else{
-			if(curr == 1) return curr;
+			if(curr == 1) 
+				return curr;
 			else if(curr <= shortest || shortest == 0)
 				shortest = curr;			
 			if(*s == '\0')
 				break;
+			
 			curr = 0;
 		}
 		
