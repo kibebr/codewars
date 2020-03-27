@@ -6,8 +6,7 @@ const uniqueInOrder = function(iterable){
 	for(let index = 0, len = iterable.length; index < len; ++index){
 		if(iterable[index-1] == iterable[index]){
 			continue;
-		}
-		else{
+		} else{
 			uniques.push(iterable[index]);
 		}
 	}
