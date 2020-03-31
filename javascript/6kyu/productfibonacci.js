@@ -35,5 +35,3 @@ function productFib(prod){
 
 	return [first, second, (first*second)===prod];
 }
-
-console.log(productFib(4895));
