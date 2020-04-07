@@ -10,12 +10,9 @@
  */
 
 function digPow(n, p){
-	let digits = n.toString().split('').map(Number);
-	let total = 0;
-	let k = 0;
-
-	for(let d = 0, len = digits.length; d < len; ++d)
-		total += digits[d]**(p++);
-
-	return (total%n) ? -1 : total/n;
+	const result = n.toString().split('')
+                  .map(Number)
+                  .reduce( (total, curr) => total + curr**(p++), 0);
+                  
+	return (result%n) ? -1 : result/n;
 }
